@@ -1,2 +1,9 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.haml
+%h1 Blog Posts
+- @posts.each do |p|
+  %h2
+    = p.title
+  %h3
+    Posted at:
+    = p.date_posted
+  %p
+    = p.content.html_safe
