@@ -20,12 +20,12 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-# production:
-#   <<: *default
-#   host: localhost
-#   adapter: postgresql
-#   encoding: utf8
-#   database: feasible-code-blog_production
-#   pool: 5
-#   username: <%= ENV['APPNAME_DATABASE_USER'] %>
-#   password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: feasible-code-blog_production
+  pool: 5
+  username: <%= ENV['APPNAME_DATABASE_USER'] %>
+  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
