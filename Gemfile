@@ -61,5 +61,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'puma'
+  # gem 'puma'
 end
