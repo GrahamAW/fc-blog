@@ -36,6 +36,7 @@ gem 'capistrano-bundler', '~> 1.1.4'
 gem 'capistrano-rails', '~> 1.1.6'
 gem 'capistrano-passenger'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano-rails-console'
 
 # haml and haml templates
 gem 'haml'
