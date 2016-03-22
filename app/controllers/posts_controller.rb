@@ -13,6 +13,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit
+  end
+
   def create
     @post = Post.new(post_params)
 
@@ -23,6 +26,18 @@ class PostsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @test.errors, status: :unprocessable_entity }
       end
     end
   end
