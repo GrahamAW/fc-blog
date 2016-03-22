@@ -1,3 +1,13 @@
 .post-content {
   line-height: 1.4em;
 }
+
+// Forms to edit and create posts
+.post-form textarea {
+  width: 90%;
+  min-height: 30em;
+}
+
+.post-form input {
+  width: 90%;
+}
