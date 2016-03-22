@@ -1,4 +1,10 @@
 body {
-  width: 40em;
+  background-color: #222;
+}
+
+.wrapper {
+  max-width: 45em;
+  background-color: #ddd;
   margin: 0 auto;
+  padding: 2em 4em;
 }
