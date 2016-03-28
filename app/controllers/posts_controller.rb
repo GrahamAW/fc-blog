@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @author_options = Author.all.map{ |a| [ a.name, a.id ]}
+    @author_options = Author.all.map{ |a| [ a.name, a.id ]} # set_post does not work on new action
   end
 
   def edit
@@ -52,6 +52,7 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+    @author_options = Author.all.map{ |a| [ a.name, a.id ]}
   end
 
   def post_params
