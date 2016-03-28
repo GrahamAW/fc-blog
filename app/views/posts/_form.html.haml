@@ -9,6 +9,10 @@
           - @post.errors.full_messages.each do |message|
             %li= message
     .field
+      = f.label :author_id
+      %br
+        = f.select(:author_id, @author_options)
+    .field
       = f.label :name
       %br
         = f.text_field :title

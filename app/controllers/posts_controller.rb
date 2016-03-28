@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @author_options = Author.all.map{ |a| [ a.name, a.id ]}
   end
 
   def edit
@@ -54,6 +55,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :slug, :content, :date_posted)
+    params.require(:post).permit(:title, :slug, :content, :date_posted, :author_id)
   end
 end
